@@ -9,13 +9,16 @@ import {
     applyEdgeChanges,
 } from '@xyflow/react'
 
-import { createWithEqualityFn } from 'zustand/traditional';
-//createWithEqualityFn is a function that creates a store with a custom equality function.
+import { createWithEqualityFn } from 'zustand/traditional'; 
+//zustand is a small state-management library
+/*The createWithEqualityFn function creates a store (a place where state is managed) 
+with a custom equality function, which helps optimize re-renders by comparing 
+the previous and next states.*/
 
 export type RFState = {
-    nodes: Node[];
+    nodes: Node[]; //Node is a TypeScript type definition that specifies the structure of a node in your application.
     edges: Edge[];
-    onNodesChange: OnNodesChange;
+    onNodesChange: OnNodesChange; //OnNodesChange is a TypeScript type definition that specifies the structure of the onNodesChange function.
     onEdgesChange: OnEdgesChange;
 };
 
